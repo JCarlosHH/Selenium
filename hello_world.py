@@ -7,14 +7,14 @@ class HelloWorld(unittest.TestCase):
 	#Prepara el entorno de la prueba
 	@classmethod
 	def setUpClass(cls):
-		cls.driver = webdriver.Edge(executable_path = r'./Driver/msedgedriver')
+		cls.driver = webdriver.Edge(executable_path = r'./Driver/msedgedriver.exe')
 		driver = cls.driver
 		driver.implicitly_wait(10)
 
 
 	#Realiza una serie de acciones
-	def test_hello_worl(self):
-		driver=self.driver
+	def test_hello_worl(cls):
+		driver=cls.driver
 		driver.get('https://www.platzi.com')
 		driver.get('https://www.wikipedia.org')
 
